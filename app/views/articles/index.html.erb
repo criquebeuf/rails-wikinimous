@@ -1,0 +1,9 @@
+<h1>Articles list</h1>
+<% @articles.each do |article| %>
+  <div class="group">
+    <p><%= link_to article["title"].capitalize, article_path(article["id"]) %></p>
+    <p><%= article.content%></p>
+  </div>
+<% end %>
+
+<div><%= link_to "Create a new article", new_article_path %></div>

@@ -14,6 +14,37 @@
  *= require_self
  */
 
- .group {
-  padding-bottom: 10px
- }
+.my-button {
+  text-decoration: none;
+  color: white;
+}
+.my-title {
+  text-decoration: none;
+  color: black;
+  font-size: 120%;
+}
+
+.my-title:hover {
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+}
+
+.my-button:hover {
+  text-decoration: none;
+  color: white;
+  font-size: 105%;
+  font-weight: bolder;
+}
+
+nav {
+  margin-bottom: 30px;
+}
+
+#card {
+  background-color: rgb(220, 226, 226);
+  padding: 10px;
+  margin: 10px;
+  /* border: 5px solid rgb(118, 164, 225); */
+  box-shadow: 12px 12px 2px 1px rgba(210, 210, 235, 0.2);
+}

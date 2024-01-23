@@ -1,9 +1,19 @@
-<h1>Articles list</h1>
-<% @articles.each do |article| %>
-  <div class="group">
-    <p><%= link_to article["title"].capitalize, article_path(article["id"]) %></p>
-    <p><%= article.content%></p>
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand"><h1>Articles list</h1></a>
+    <form class="d-flex">
+      <button class="btn btn-dark" type="submit"><%= link_to "Create a new article", new_article_path, class:"my-button"%></button>
+    </form>
   </div>
-<% end %>
+</nav>
 
-<div><%= link_to "Create a new article", new_article_path %></div>
+<div class="row justify-content-md-center">
+  <div class="col-md-auto">
+    <% @articles.each do |article| %>
+      <div id="card">
+        <p><%= link_to article["title"].capitalize, article_path(article["id"]), class:"my-title" %></p>
+        <p><%= article.content%></p>
+      </div>
+    <% end %>
+  </div>
+</div>
